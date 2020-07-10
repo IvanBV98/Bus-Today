@@ -134,8 +134,7 @@ function clock() {
             hour: hours,
             minute: minutes,
             second: seconds
-        }),
-        lefttime = forEach ()
+        })
     console.log(waiting_Date_1);
     // setTimeout(clock(), 1000);
 }
