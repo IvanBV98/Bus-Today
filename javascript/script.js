@@ -83,20 +83,60 @@ const headerSlider = new Slider({
         // opacity:true
     })
 
-console.log(expmleSlider)
-
 // main
 
 // secoondomer
+
 class Time {
-    constructor({ month, daynum, day, hour, minutes, second }) {
-        this.month = document.querySelector(month)
-        this.daynum = document.querySelector(daynum)
-        this.day = document.querySelector(day)
-        this.hour = document.querySelector(hour)
-        this.minutes = document.querySelector(minutes)
-        this.second = document.querySelector(second)
-        if (this.month.toUpperCase == 'JANUARY' || this.month.toUpperCase == 'MARCH' || this.month.toUpperCase == 'MAY' || this.month.toUpperCase == 'JULE' || this.month.toUpperCase == 'AUGUST' || this.month.toUpperCase == 'OCTOBER' || this.month.toUpperCase == 'DECEMBER') this.daynum = 31
+    constructor({ year, month, daynum, day, hour, minute, second }) {
+        this.year = year
+        this.month = month
+        this.day = day
+        this.hour = hour
+        this.minute = minute
+        this.second = second
+        // if (this.month.toUpperCase() == 'JANUARY' || this.month.toUpperCase() == 'MARCH' || this.month.toUpperCase() == 'MAY' || this.month.toUpperCase() == 'JULE' || this.month.toUpperCase() == 'AUGUST' || this.month.toUpperCase() == 'OCTOBER' || this.month.toUpperCase() == 'DECEMBER') daynum = 31;
+        // else if (this.month.toUpperCase() == 'APRIL' || this.month.toUpperCase() == 'JUNE' || this.month.toUpperCase() == 'SEPTEMBER' || this.month.toUpperCase() == 'NOVEMBER') daynum = 30;
+        // else if (this.month.toUpperCase() == 'FEBRUARY') {
+        //     if (this.year % 4 == 0) daynum = 29;
+        //     else this.daynum = 28;
+        // }
+        this.year = year != '' ? this.year : 2000
+        this.month = month != '' ? this.month : 1
+        this.day = day != '' ? this.day : 1
+        this.hour = hour != '' ? this.hour : 0
+        this.minute = minute != '' ? this.minutes : 0
+        this.second = second != '' ? this.second : 0
     }
 }
-// time = new Date()
+
+let waiting_Date = new Time({
+    year: 2020,
+    month: 8,
+    day: 1,
+    hour: '',
+    minute: '',
+    second: ''
+})
+
+function clock() {
+    let time = new Date(),
+        years = time.getFullYear(),
+        monthes = time.getMonth(),
+        days = time.getDate(),
+        hours = time.getHours(),
+        minutes = time.getMinutes(),
+        seconds = time.getSeconds(),
+        waiting_Date_1 = new Time({
+            year: years,
+            month: monthes,
+            day: days,
+            hour: hours,
+            minute: minutes,
+            second: seconds
+        }),
+        lefttime = forEach ()
+    console.log(waiting_Date_1);
+    // setTimeout(clock(), 1000);
+}
+clock();

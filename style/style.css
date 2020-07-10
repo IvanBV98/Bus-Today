@@ -193,17 +193,21 @@ main {
     display: flex;
     background: white;
     justify-content: space-around;
+    align-items:center;
     text-align: center;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Comic Sans MS';
     font-size: 25px;
 }
+.bus__image {
+    width: 40%;
+    height: 40%;
+}
 .mbinform {
     display: flex;
     flex-direction: column;
 }
-
 .mbinform li {
     padding: 50px;
     padding-bottom: 25px;
@@ -226,6 +230,7 @@ main {
     align-items: space-around;
     font-size: 20px;
     padding: 12.5px;
+    margin: 5px;
 }
 .secblock2 {
     width: 75px;
