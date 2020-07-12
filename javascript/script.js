@@ -134,8 +134,41 @@ function clock() {
             hour: hours,
             minute: minutes,
             second: seconds
-        })
-    console.log(waiting_Date_1);
+        });
+    for (const num in waiting_Date) {
+        waiting_Date[num] -= waiting_Date_1[num]
+    }
+    // for (const num in waiting_Date) {
+    //     if(waiting_Date[num] < 0) {
+    //         if (num == 0) {
+    //             for (const num in waiting_Date) {
+    //                 waiting_Date[num] = 0
+    //             }
+    //         }
+    //         else if (num == 1) {
+    //             waiting_Date[num -= 1] -= 1
+    //             waiting_Date[num] += 12
+    //         }
+    //         else if (num == 2) {
+    //             waiting_Date[num -= 1] -= 1
+    //             if (waiting_Date[num] == 1 || waiting_Date[num] == 3 || waiting_Date[num] == 5 || waiting_Date[num] == 7 || waiting_Date[num] == 8 || waiting_Date[num] == 10 || waiting_Date[num] == 12) waiting_Date[num] += 31
+    //             else if (waiting_Date[num] == 4 || waiting_Date[num] == 6 || waiting_Date[num] == 9 || waiting_Date[num] == 11) waiting_Date[num] += 30
+    //             else if (waiting_Date[num] == 2) {
+    //                 if ((waiting_Date[0]) % 4 == 0) waiting_Date[num] += 29;
+    //                 else waiting_Date[num] += 28;
+    //             }
+    //         }
+    //         else if (num == 3) {
+    //             waiting_Date[num -= 1] -= 1
+    //             waiting_Date[num] += 24
+    //         }
+    //         else if (num == 4 || num == 5) {
+    //             waiting_Date[num -= 1] -= 1
+    //             waiting_Date[num] += 60
+    //         }
+    //     }
+    // }
+    console.log(waiting_Date);
     // setTimeout(clock(), 1000);
 }
 clock();
